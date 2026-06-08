@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DO IT UP Unisex Salon</title>
+    <meta
+      name="description"
+      content="DO IT UP is a luxurious unisex salon in Kothrud, Pune offering premium hair, skin, grooming, and massage services with WhatsApp booking and directions."
+    />
+    <meta name="theme-color" content="#14120f" />
+    <meta property="og:title" content="DO IT UP Unisex Salon" />
+    <meta property="og:description" content="Premium hair, skin, grooming, and massage services in Kothrud, Pune." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hero-salon.jpg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='5 5 190 190'%3E%3Ccircle cx='100' cy='100' r='95' fill='%23040404'/%3E%3Cg fill='none' stroke='%23C6B287' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M 72 135 A 45 45 0 1 1 125 137'/%3E%3Cpath d='M 93 42 L 93 158 A 62 62 0 0 0 151 82'/%3E%3C/g%3E%3Cg fill='%23C6B287'%3E%3Ccircle cx='151' cy='82' r='4.5'/%3E%3Ccircle cx='141' cy='66' r='4.5'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="DO IT UP home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="5 5 190 190">
+            <circle cx="100" cy="100" r="95" />
+            <g class="logo-monogram">
+              <g class="logo-lines">
+                <path d="M 72 135 A 45 45 0 1 1 125 137" />
+                <path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" />
+              </g>
+              <g class="logo-dots">
+                <circle cx="151" cy="82" r="4.5" />
+                <circle cx="141" cy="66" r="4.5" />
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>DO IT UP</strong>
+          <small>Unisex Salon</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="DO IT UP luxury salon">
+        <div class="hero-media" role="img" aria-label="Premium salon styling suite"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Luxury hair, beauty, and grooming</p>
+          <h1>DO IT UP</h1>
+          <p class="hero-copy">
+            A refined unisex salon in Kothrud for precision cuts, luminous color, modern skin rituals, relaxed grooming,
+            and simple massage therapies.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#booking">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v14H3V7a2 2 0 0 1 2-2Z" />
+              </svg>
+              Request Appointment
+            </a>
+            <a
+              class="button whatsapp"
+              href="https://wa.me/919158741818?text=Hello%20DO%20IT%20UP%2C%20I%20want%20to%20book%20an%20appointment."
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.5Z" />
+                <path d="M8.8 8.8c.3-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.6 1.4c.1.3 0 .5-.2.7l-.4.4c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.4.7c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.9-.8.4-2.6.1-4.8-1.2-2.1-1.3-3.4-3.3-3.6-4.5-.1-.6.1-1 .2-1.4Z" />
+              </svg>
+              WhatsApp Booking
+            </a>
+            <a
+              class="button ghost"
+              href="https://www.google.com/maps/dir/?api=1&destination=Kshitij%20Residency%2C%20Shop%20No.%20B-13%2C%20Mayur%20Colony%20Rd%2C%20Kothrud%2C%20Pune%2C%20Maharashtra%20411038"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-5.2 7-12A7 7 0 1 0 5 9c0 6.8 7 12 7 12Z" />
+                <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+              </svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Salon highlights">
+          <strong>Tailored care for every guest</strong>
+          <p>Premium consultations, skilled salon care, and appointment support on WhatsApp.</p>
+        </div>
+      </section>
+
+      <section class="services section" id="services">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Services</p>
+            <h2>Designed for hair, skin, and confidence.</h2>
+          </div>
+          <button class="button rate-button" type="button" data-rates-open>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 2h12v20H6z" />
+              <path d="M9 6h6M9 10h6M9 14h2M14 14h1M9 18h2M14 18h1" />
+            </svg>
+            View Detailed Rates
+          </button>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <img
+              src="assets/service-hair.jpg"
+              alt="Hair styling service"
+            />
+            <div>
+              <span>01</span>
+              <h3>Signature Hair</h3>
+              <p>Female haircut, male haircut, classic wash, wash and blowdry, blowdry, iron, tong, and styling.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img
+              src="assets/service-skin.jpg"
+              alt="Facial skincare service"
+            />
+            <div>
+              <span>02</span>
+              <h3>Skin Studio</h3>
+              <p>Cleanups, facials, de-tan care, threading, waxing, brow shaping, and glow-focused skin rituals.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img
+              src="assets/service-grooming.jpg"
+              alt="Premium grooming service"
+            />
+            <div>
+              <span>03</span>
+              <h3>Grooming Lounge</h3>
+              <p>Male haircut, beard service, male styling, male global colour, and male hair spa.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img
+              src="assets/service-massage.jpg"
+              alt="Relaxing massage service"
+            />
+            <div>
+              <span>04</span>
+              <h3>Colour & Care</h3>
+              <p>Global colour, touch-up, highlights, balayage, protein treatment, female hair spa, and massage care.</p>
+            </div>
+          </article>
+        </div>
+        <div class="service-strip" aria-label="Popular salon services">
+          <span>Female haircut</span>
+          <span>Male haircut</span>
+          <span>Beard</span>
+          <span>Blowdry</span>
+          <span>Global colour</span>
+          <span>Highlights</span>
+          <span>Balayage</span>
+          <span>Protein treatment</span>
+          <span>Hair spa</span>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="about-image" role="img" aria-label="Luxury salon interior"></div>
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2>Premium care without the cold formality.</h2>
+          <p>
+            DO IT UP blends attentive consultation with elevated technique. Every appointment begins with lifestyle,
+            hair texture, skin needs, and maintenance in mind, then finishes with styling guidance you can actually use.
+          </p>
+          <div class="stats">
+            <div>
+              <strong>10:00 AM - 09:00 PM</strong>
+              <span>Open daily</span>
+            </div>
+            <div>
+              <strong>60 min</strong>
+              <span>Average ritual</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Gallery</p>
+            <h2>Salon moments, styled like posts.</h2>
+          </div>
+          <div class="gallery-controls" aria-label="Gallery controls">
+            <button class="icon-button" type="button" aria-label="Previous gallery image" data-gallery-prev>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 18 9 12l6-6" />
+              </svg>
+            </button>
+            <button class="icon-button" type="button" aria-label="Next gallery image" data-gallery-next>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="gallery-track" data-gallery-track tabindex="0" aria-label="DO IT UP Instagram-style gallery">
+          <article class="insta-card">
+            <div class="post-head">
+              <span class="brand-logo mini-logo" aria-hidden="true">
+                <svg viewBox="5 5 190 190">
+                  <circle cx="100" cy="100" r="95" />
+                  <g class="logo-monogram">
+                    <g class="logo-lines">
+                      <path d="M 72 135 A 45 45 0 1 1 125 137" />
+                      <path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" />
+                    </g>
+                    <g class="logo-dots">
+                      <circle cx="151" cy="82" r="4.5" />
+                      <circle cx="141" cy="66" r="4.5" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <div>
+                <strong>doitup_salon</strong>
+                <span>Kothrud, Pune</span>
+              </div>
+            </div>
+            <img class="post-image" src="assets/gallery-1.jpg" alt="DO IT UP salon gallery photo 1" />
+            <p>Premium salon ambience for every appointment.</p>
+          </article>
+          <article class="insta-card">
+            <div class="post-head">
+              <span class="brand-logo mini-logo" aria-hidden="true">
+                <svg viewBox="5 5 190 190">
+                  <circle cx="100" cy="100" r="95" />
+                  <g class="logo-monogram">
+                    <g class="logo-lines">
+                      <path d="M 72 135 A 45 45 0 1 1 125 137" />
+                      <path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" />
+                    </g>
+                    <g class="logo-dots">
+                      <circle cx="151" cy="82" r="4.5" />
+                      <circle cx="141" cy="66" r="4.5" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <div>
+                <strong>doitup_salon</strong>
+                <span>Hair care</span>
+              </div>
+            </div>
+            <img class="post-image" src="assets/gallery-2.jpg" alt="DO IT UP salon gallery photo 2" />
+            <p>Clean, calm, and ready for your next transformation.</p>
+          </article>
+          <article class="insta-card">
+            <div class="post-head">
+              <span class="brand-logo mini-logo" aria-hidden="true">
+                <svg viewBox="5 5 190 190">
+                  <circle cx="100" cy="100" r="95" />
+                  <g class="logo-monogram">
+                    <g class="logo-lines">
+                      <path d="M 72 135 A 45 45 0 1 1 125 137" />
+                      <path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" />
+                    </g>
+                    <g class="logo-dots">
+                      <circle cx="151" cy="82" r="4.5" />
+                      <circle cx="141" cy="66" r="4.5" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <div>
+                <strong>doitup_salon</strong>
+                <span>Styling</span>
+              </div>
+            </div>
+            <img class="post-image" src="assets/gallery-3.jpg" alt="DO IT UP salon gallery photo 3" />
+            <p>Fresh finishes, soft blowdries, and confident styling.</p>
+          </article>
+          <article class="insta-card">
+            <div class="post-head">
+              <span class="brand-logo mini-logo" aria-hidden="true">
+                <svg viewBox="5 5 190 190">
+                  <circle cx="100" cy="100" r="95" />
+                  <g class="logo-monogram">
+                    <g class="logo-lines">
+                      <path d="M 72 135 A 45 45 0 1 1 125 137" />
+                      <path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" />
+                    </g>
+                    <g class="logo-dots">
+                      <circle cx="151" cy="82" r="4.5" />
+                      <circle cx="141" cy="66" r="4.5" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <div>
+                <strong>doitup_salon</strong>
+                <span>Skin rituals</span>
+              </div>
+            </div>
+            <img class="post-image" src="assets/gallery-4.jpg" alt="DO IT UP salon gallery photo 4" />
+            <p>Glow care and everyday grooming in one place.</p>
+          </article>
+          <article class="insta-card">
+            <div class="post-head">
+              <span class="brand-logo mini-logo" aria-hidden="true">
+                <svg viewBox="5 5 190 190">
+                  <circle cx="100" cy="100" r="95" />
+                  <g class="logo-monogram">
+                    <g class="logo-lines">
+                      <path d="M 72 135 A 45 45 0 1 1 125 137" />
+                      <path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" />
+                    </g>
+                    <g class="logo-dots">
+                      <circle cx="151" cy="82" r="4.5" />
+                      <circle cx="141" cy="66" r="4.5" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <div>
+                <strong>doitup_salon</strong>
+                <span>Grooming</span>
+              </div>
+            </div>
+            <img class="post-image" src="assets/gallery-5.jpg" alt="DO IT UP salon gallery photo 5" />
+            <p>Sharp grooming with a relaxed, premium feel.</p>
+          </article>
+          <article class="insta-card">
+            <div class="post-head">
+              <span class="brand-logo mini-logo" aria-hidden="true">
+                <svg viewBox="5 5 190 190">
+                  <circle cx="100" cy="100" r="95" />
+                  <g class="logo-monogram">
+                    <g class="logo-lines">
+                      <path d="M 72 135 A 45 45 0 1 1 125 137" />
+                      <path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" />
+                    </g>
+                    <g class="logo-dots">
+                      <circle cx="151" cy="82" r="4.5" />
+                      <circle cx="141" cy="66" r="4.5" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <div>
+                <strong>doitup_salon</strong>
+                <span>Relaxation</span>
+              </div>
+            </div>
+            <img class="post-image" src="assets/gallery-6.jpg" alt="DO IT UP salon gallery photo 6" />
+            <p>Simple relaxation therapies for a better salon day.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking section" id="booking">
+        <div class="booking-copy">
+          <p class="eyebrow">Booking</p>
+          <h2>Reserve your chair.</h2>
+          <p>Choose your preferred service, date, and time. The salon owner will review the request before confirming.</p>
+          <div class="booking-note">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            Open daily from 10:00 AM to 09:00 PM
+          </div>
+          <div class="booking-note booking-note-secondary">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 11 12 14 22 4" />
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+            </svg>
+            The salon team will confirm your appointment after reviewing the request.
+          </div>
+        </div>
+
+        <form class="booking-form" data-booking-form data-booking-endpoint="https://script.google.com/macros/s/AKfycbxxplrcCs8k7pJRsvKSpqacASRIe7X9IzYyuXU-PmaL_Twy7XxJ62hQj0ww3PVkFird/exec">
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Phone number
+            <input type="tel" name="phone" placeholder="+91 91587 41818" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            Service
+            <select name="service" required>
+              <option value="">Choose a service</option>
+              <option>Female haircut</option>
+              <option>Male haircut</option>
+              <option>Beard / Grooming</option>
+              <option>Wash and blowdry</option>
+              <option>Global colour</option>
+              <option>Highlights / Balayage</option>
+              <option>Hair spa / Treatment</option>
+              <option>Skin cleanup / Facial</option>
+              <option>Massage care</option>
+            </select>
+          </label>
+          <label>
+            Preferred date
+            <input type="date" name="date" required />
+          </label>
+          <label>
+            Preferred time
+            <input type="time" name="time" min="10:00" max="21:00" step="1800" required />
+          </label>
+          <label class="full">
+            Message
+            <textarea name="message" rows="4" placeholder="Tell us what you have in mind"></textarea>
+          </label>
+          <button class="button primary full" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v14H3V7a2 2 0 0 1 2-2Z" />
+            </svg>
+            Request Appointment
+          </button>
+          <a class="button whatsapp-notice full is-hidden" href="#" target="_blank" rel="noreferrer" data-whatsapp-confirm>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.5Z" />
+              <path d="M8.8 8.8c.3-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.6 1.4c.1.3 0 .5-.2.7l-.4.4c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.4.7c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.9-.8.4-2.6.1-4.8-1.2-2.1-1.3-3.4-3.3-3.6-4.5-.1-.6.1-1 .2-1.4Z" />
+            </svg>
+            Send booking details on WhatsApp
+          </a>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="contact-details">
+          <p class="eyebrow">Contact</p>
+          <h2>Visit the salon.</h2>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-5.2 7-12A7 7 0 1 0 5 9c0 6.8 7 12 7 12Z" />
+                <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+              </svg>
+              Kshitij Residency, Shop No. B-13, Mayur Colony Rd, Kothrud, Pune, Maharashtra-411038
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" />
+              </svg>
+              +91 9158741818
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.5Z" />
+                <path d="M8.8 8.8c.3-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.6 1.4c.1.3 0 .5-.2.7l-.4.4c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.4.7c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.9-.8.4-2.6.1-4.8-1.2-2.1-1.3-3.4-3.3-3.6-4.5-.1-.6.1-1 .2-1.4Z" />
+              </svg>
+              WhatsApp: +91 9158741818
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4h16v16H4z" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+              contact@doitupsalon.com
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M17.5 6.5h.01" />
+              </svg>
+              Instagram: @doitup_salon
+            </li>
+          </ul>
+          <div class="contact-actions">
+            <a
+              class="button whatsapp"
+              href="https://wa.me/919158741818?text=Hello%20DO%20IT%20UP%2C%20I%20want%20to%20book%20an%20appointment."
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.5Z" />
+                <path d="M8.8 8.8c.3-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.6 1.4c.1.3 0 .5-.2.7l-.4.4c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.4.7c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.9-.8.4-2.6.1-4.8-1.2-2.1-1.3-3.4-3.3-3.6-4.5-.1-.6.1-1 .2-1.4Z" />
+              </svg>
+              WhatsApp Booking
+            </a>
+            <a
+              class="button instagram"
+              href="https://www.instagram.com/doitup_salon/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M17.5 6.5h.01" />
+              </svg>
+              Instagram
+            </a>
+            <a
+              class="button map-button"
+              href="https://www.google.com/maps/dir/?api=1&destination=Kshitij%20Residency%2C%20Shop%20No.%20B-13%2C%20Mayur%20Colony%20Rd%2C%20Kothrud%2C%20Pune%2C%20Maharashtra%20411038"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m3 11 19-9-9 19-2-8-8-2Z" />
+              </svg>
+              Google Get Direction
+            </a>
+          </div>
+        </div>
+        <div class="map-wrap" aria-label="Google map showing salon location">
+          <iframe
+            title="DO IT UP location map"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.5356956282867!2d73.80762097574825!3d18.504678969658375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf316e6ffe5d%3A0xef203fa68de51565!2sDo%20It%20Up%20(Unisex%20Salon)!5e0!3m2!1sen!2sde!4v1780735190198!5m2!1sen!2sde"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="rates-dialog" data-rates-dialog aria-labelledby="rates-title">
+      <div class="rates-window">
+        <div class="rates-head">
+          <div>
+            <p class="eyebrow">Detailed Rates</p>
+            <h2 id="rates-title">DO IT UP service menu</h2>
+          </div>
+          <button class="icon-button close-button" type="button" aria-label="Close rates" data-rates-close>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <p class="rates-note">All rates are in Indian rupees. Rates marked * may vary by hair length, volume, or consultation.</p>
+        <div class="rate-groups">
+          <section class="rate-group">
+            <h3>Haircuts & Styling</h3>
+            <dl>
+              <div><dt>Female haircut</dt><dd>₹900</dd></div>
+              <div><dt>Male haircut</dt><dd>₹500</dd></div>
+              <div><dt>Beard</dt><dd>₹300</dd></div>
+              <div><dt>Male styling</dt><dd>₹300</dd></div>
+              <div><dt>Female classic wash</dt><dd>₹400</dd></div>
+              <div><dt>Wash and blowdry</dt><dd>₹800</dd></div>
+              <div><dt>Blowdry</dt><dd>₹500</dd></div>
+              <div><dt>Iron</dt><dd>₹800</dd></div>
+              <div><dt>Tong</dt><dd>₹800</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>Colour</h3>
+            <dl>
+              <div><dt>Male global colour</dt><dd>₹1000*</dd></div>
+              <div><dt>Male global colour without ammonia</dt><dd>₹1300*</dd></div>
+              <div><dt>Female global colour</dt><dd>₹4000*</dd></div>
+              <div><dt>Female touch-up</dt><dd>₹1500</dd></div>
+              <div><dt>Female touch-up without ammonia</dt><dd>₹1800</dd></div>
+              <div><dt>Female classic highlights</dt><dd>₹4000*</dd></div>
+              <div><dt>Balayage</dt><dd>₹6000*</dd></div>
+              <div><dt>Highlight streaks</dt><dd>₹400</dd></div>
+              <div><dt>Changs</dt><dd>₹600</dd></div>
+            </dl>
+            <p class="mini-note">Extra pre-lightening applicable where needed.</p>
+          </section>
+          <section class="rate-group">
+            <h3>Treatments & Hair Spa</h3>
+            <dl>
+              <div><dt>Protein treatment</dt><dd>₹5000*</dd></div>
+              <div><dt>Male hair spa basic</dt><dd>₹1000</dd></div>
+              <div><dt>Male hair spa advanced</dt><dd>₹1500</dd></div>
+              <div><dt>Female hair spa basic</dt><dd>₹2000*</dd></div>
+              <div><dt>Female hair spa shea</dt><dd>₹2700*</dd></div>
+            </dl>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <a class="brand" href="#home" aria-label="DO IT UP home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="5 5 190 190">
+            <circle cx="100" cy="100" r="95" />
+            <g class="logo-monogram">
+              <g class="logo-lines">
+                <path d="M 72 135 A 45 45 0 1 1 125 137" />
+                <path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" />
+              </g>
+              <g class="logo-dots">
+                <circle cx="151" cy="82" r="4.5" />
+                <circle cx="141" cy="66" r="4.5" />
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>DO IT UP</strong>
+          <small>Unisex Salon</small>
+        </span>
+      </a>
+      <p>Luxury salon care for every texture, tone, and style.</p>
+      <div class="footer-meta">
+        <a href="https://www.instagram.com/doitup_salon/" target="_blank" rel="noreferrer">@doitup_salon</a>
+        <small>&copy; <span data-year></span> Do It Up. All rights reserved</small>
+      </div>
+    </footer>
+
+    <div class="quick-actions" aria-label="Quick contact actions">
+      <a href="tel:+919158741818" aria-label="Call DO IT UP">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z" />
+        </svg>
+      </a>
+      <a href="https://wa.me/919158741818?text=Hello%20DO%20IT%20UP%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noreferrer" aria-label="WhatsApp DO IT UP">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.5Z" />
+          <path d="M8.8 8.8c.3-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.6 1.4c.1.3 0 .5-.2.7l-.4.4c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.4.7c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.9-.8.4-2.6.1-4.8-1.2-2.1-1.3-3.4-3.3-3.6-4.5-.1-.6.1-1 .2-1.4Z" />
+        </svg>
+      </a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Kshitij%20Residency%2C%20Shop%20No.%20B-13%2C%20Mayur%20Colony%20Rd%2C%20Kothrud%2C%20Pune%2C%20Maharashtra%20411038" target="_blank" rel="noreferrer" aria-label="Get directions to DO IT UP">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m3 11 19-9-9 19-2-8-8-2Z" />
+        </svg>
+      </a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
