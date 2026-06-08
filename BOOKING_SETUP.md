@@ -27,6 +27,8 @@ After that, website bookings will create pending Google Calendar request holds a
 
 The script does not email the client when the request is submitted. It emails the salon owner with an **Accept appointment** link and creates a default 60-minute `[REQUEST]` calendar hold. The same accept link is also added inside the calendar event description.
 
+Overlapping requests are allowed. If a new request conflicts with an existing calendar event, the owner email will include a conflict warning instead of blocking the booking.
+
 Edit the `CLIENT_SIGNATURE` block in `google-apps-script-booking.js` if you want to change the signature that appears in the confirmation email sent after the owner accepts the appointment.
 
 Owner workflow:
