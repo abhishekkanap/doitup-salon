@@ -38,16 +38,16 @@ function doPost(e) {
 
     const start = new Date(booking.start);
     const end = booking.end ? new Date(booking.end) : new Date(start.getTime() + DEFAULT_HOLD_MINUTES * 60 * 1000);
-    const existingEvents = calendar.getEvents(start, end);
     const token = Utilities.getUuid();
     const acceptUrl = getActionUrl(booking, "accept", token);
-
-    if (existingEvents.length > 0) {
-      return jsonResponse({
-        ok: false,
-        message: "This slot is already booked. Please choose another time."
-      });
-    }
+    const conflictingEvents = calendar.getEvents(start, end).filter((event) => {
+      const eventStart = event.getStartTime();
+      const eventEnd = event.getEndTime();
+      return eventStart < end && eventEnd > start;
+    });
+    const conflictWarning = conflictingEvents.length > 0
+      ? buildConflictWarning(conflictingEvents)
+      : "";
 
     const description = [
       "Website booking request",
@@ -58,6 +58,7 @@ function doPost(e) {
       `Service: ${booking.service}`,
       `Requested time: ${booking.date} at ${booking.time}`,
       `Calendar hold: ${DEFAULT_HOLD_MINUTES} minutes. Owner should adjust duration before confirming.`,
+      ...(conflictWarning ? ["", "Conflict warning:", conflictWarning] : []),
       "",
       "Owner action:",
       `Accept and send client confirmation: ${acceptUrl}`,
@@ -77,6 +78,9 @@ function doPost(e) {
     );
 
     const ownerSubject = `New salon booking: ${booking.service}`;
+    const ownerSubjectLine = conflictingEvents.length > 0
+      ? `[CONFLICT] ${ownerSubject}`
+      : ownerSubject;
     const ownerBody = [
       "A new booking was submitted from the website.",
       "",
@@ -88,6 +92,7 @@ function doPost(e) {
       `Time: ${booking.time}`,
       `Calendar hold: ${DEFAULT_HOLD_MINUTES} minutes`,
       "Adjust the event duration manually before sending confirmation to the client.",
+      ...(conflictWarning ? ["", "Conflict warning:", conflictWarning] : []),
       booking.message ? `Message: ${booking.message}` : "",
       booking.whatsappUrl ? `WhatsApp copy: ${booking.whatsappUrl}` : "",
       "",
@@ -97,8 +102,11 @@ function doPost(e) {
       acceptUrl
     ].filter(Boolean).join("\n");
 
-    const ownerHtml = [
-      "<p>A new booking request was submitted from the website.</p>",
+  const ownerHtml = [
+    "<p>A new booking request was submitted from the website.</p>",
+    conflictingEvents.length > 0
+      ? `<p style="padding:12px 14px;border-radius:6px;background:#fff3cd;color:#664d03;font-weight:700;">${escapeHtml(conflictWarning)}</p>`
+      : "",
       "<ul>",
       `<li><strong>Name:</strong> ${escapeHtml(booking.name)}</li>`,
       `<li><strong>Phone:</strong> ${escapeHtml(booking.phone)}</li>`,
@@ -119,7 +127,7 @@ function doPost(e) {
       createdAt: new Date().toISOString()
     }));
 
-    sendSalonEmail(OWNER_EMAIL, ownerSubject, ownerBody, ownerHtml);
+    sendSalonEmail(OWNER_EMAIL, ownerSubjectLine, ownerBody, ownerHtml);
 
     return jsonResponse({
       ok: true,
@@ -222,6 +230,22 @@ function acceptBooking(token) {
 function getActionUrl(booking, action, token) {
   const baseUrl = booking.endpoint || ScriptApp.getService().getUrl();
   return `${baseUrl}?action=${encodeURIComponent(action)}&token=${encodeURIComponent(token)}`;
+}
+
+function buildConflictWarning(conflictingEvents) {
+  const lines = [
+    `This request overlaps ${conflictingEvents.length} existing appointment(s).`,
+    "The booking was still saved so the owner can review and confirm manually."
+  ];
+
+  conflictingEvents.forEach((event, index) => {
+    const timeZone = "Asia/Kolkata";
+    const start = Utilities.formatDate(event.getStartTime(), timeZone, "dd MMM yyyy, hh:mm a");
+    const end = Utilities.formatDate(event.getEndTime(), timeZone, "hh:mm a");
+    lines.push(`${index + 1}. ${event.getTitle()} (${start} - ${end})`);
+  });
+
+  return lines.join("\n");
 }
 
 function sendSalonEmail(to, subject, body, htmlBody) {
