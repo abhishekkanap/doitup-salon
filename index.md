@@ -24,4 +24,3 @@ Clients can request an appointment from the website by choosing a service, date,
 - Email: contact@doitupsalon.com
 - Instagram: @doitup_salon
 - Address: Kshitij Residency, Shop No. B-13, Mayur Colony Rd, Kothrud, Pune, Maharashtra 411038
-
