@@ -1,0 +1,29 @@
+{
+  "linkset": [
+    {
+      "anchor": "/api/booking-request",
+      "service-desc": [
+        {
+          "href": "/.well-known/openapi.json",
+          "type": "application/openapi+json",
+          "title": "DO IT UP booking request OpenAPI description"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "/docs/api.md",
+          "type": "text/markdown",
+          "title": "DO IT UP booking request documentation"
+        }
+      ],
+      "status": [
+        {
+          "href": "/.well-known/status.json",
+          "type": "application/json",
+          "title": "DO IT UP site status metadata"
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,11 @@
+{
+  "issuer": "/",
+  "authorization_endpoint": null,
+  "token_endpoint": null,
+  "jwks_uri": null,
+  "grant_types_supported": [],
+  "response_types_supported": [],
+  "scopes_supported": [],
+  "status": "no OpenID Connect provider is currently offered"
+}
+

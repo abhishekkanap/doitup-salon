@@ -1,0 +1,10 @@
+{
+  "resource": "/",
+  "authorization_servers": [],
+  "scopes_supported": [],
+  "bearer_methods_supported": [],
+  "resource_documentation": "/auth.md",
+  "policy_uri": "/auth.md",
+  "status": "no protected public API is currently exposed"
+}
+

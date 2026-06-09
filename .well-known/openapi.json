@@ -1,0 +1,82 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DO IT UP Booking Request",
+    "version": "1.0.0",
+    "description": "Public booking request contract for the DO IT UP salon website. The deployed endpoint is hosted by Google Apps Script."
+  },
+  "servers": [
+    {
+      "url": "https://script.google.com/macros/s/AKfycbxxplrcCs8k7pJRsvKSpqacASRIe7X9IzYyuXU-PmaL_Twy7XxJ62hQj0ww3PVkFird/exec"
+    }
+  ],
+  "paths": {
+    "/": {
+      "post": {
+        "summary": "Submit an appointment request",
+        "description": "Creates a pending calendar request and emails the salon owner. Client confirmation is sent only after owner acceptance.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Booking request accepted for owner review",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ok": { "type": "boolean" },
+                    "message": { "type": "string" },
+                    "eventId": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Endpoint status or owner approval action",
+        "responses": {
+          "200": {
+            "description": "Endpoint status or owner approval result"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BookingRequest": {
+        "type": "object",
+        "required": ["name", "phone", "service", "date", "time", "start"],
+        "properties": {
+          "name": { "type": "string" },
+          "phone": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "service": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "time": { "type": "string" },
+          "message": { "type": "string" },
+          "start": { "type": "string", "format": "date-time" },
+          "end": { "type": "string", "format": "date-time" },
+          "timezone": { "type": "string" },
+          "location": { "type": "string" },
+          "whatsappMessage": { "type": "string" },
+          "whatsappUrl": { "type": "string", "format": "uri" },
+          "endpoint": { "type": "string", "format": "uri" },
+          "source": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}
+
