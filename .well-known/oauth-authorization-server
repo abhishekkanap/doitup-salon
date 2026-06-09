@@ -1,0 +1,17 @@
+{
+  "issuer": "/",
+  "authorization_endpoint": null,
+  "token_endpoint": null,
+  "jwks_uri": null,
+  "grant_types_supported": [],
+  "response_types_supported": [],
+  "scopes_supported": [],
+  "agent_auth": {
+    "registration_required": false,
+    "register_uri": null,
+    "supported_identity_types": [],
+    "supported_credential_types": []
+  },
+  "status": "no OAuth authorization server is currently offered"
+}
+

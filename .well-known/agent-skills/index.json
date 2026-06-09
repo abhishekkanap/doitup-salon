@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agentskills.io/schemas/agent-skills-discovery-v0.2.0.json",
+  "skills": [
+    {
+      "name": "robots-txt",
+      "type": "documentation",
+      "description": "Crawl rules, AI crawler policy, and Content-Signal preferences.",
+      "url": "/.well-known/agent-skills/robots-txt.md",
+      "sha256": "c892fa4e961f75f1fba9dbdbd62219da9d7528c3ac2824cee4287a446933a7ed"
+    },
+    {
+      "name": "api-catalog",
+      "type": "documentation",
+      "description": "API catalog and service discovery metadata.",
+      "url": "/.well-known/agent-skills/api-catalog.md",
+      "sha256": "cecc2196d5dc1fed49e14d6acc2c65fe843c7ee2d25b79fad04e0d33db80b31f"
+    },
+    {
+      "name": "booking-request",
+      "type": "tool",
+      "description": "Guide a user to request a salon appointment.",
+      "url": "/.well-known/agent-skills/booking-request.md",
+      "sha256": "99773d66789d539120b2c54b05aa5dd4bfce8daf05861ff423464c200e30ed77"
+    },
+    {
+      "name": "contact-details",
+      "type": "documentation",
+      "description": "Public salon contact details for agents.",
+      "url": "/.well-known/agent-skills/contact-details.md",
+      "sha256": "9491c8f8a44c114926b756d847aa6bb9e6b8ef3eacdf6712aaa884dbf8847e62"
+    }
+  ]
+}
+
