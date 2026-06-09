@@ -1,0 +1,28 @@
+{
+  "serverInfo": {
+    "name": "DO IT UP website",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "web",
+    "endpoint": "/"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "request_appointment",
+        "description": "Open or submit the public appointment request form on the website."
+      },
+      {
+        "name": "get_contact_details",
+        "description": "Return salon contact, WhatsApp, Instagram, and address details."
+      }
+    ],
+    "resources": [
+      "/index.md",
+      "/docs/api.md",
+      "/.well-known/api-catalog"
+    ]
+  }
+}
+
