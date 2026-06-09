@@ -18,5 +18,5 @@ Allow: /
 
 Content-Signal: ai-train=no, search=yes, ai-input=yes
 
-Sitemap: Sitemap: https://www.doitupsalon.com/sitemap.xml
+Sitemap: https://www.doitupsalon.com/sitemap.xml
 
