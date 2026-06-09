@@ -1,6 +1,6 @@
 # DO IT UP Unisex Salon
 
-DO IT UP is a unisex salon in Kothrud, Pune offering haircuts, styling, colour, and hair spa services.
+DO IT UP is a luxurious unisex salon in Kothrud, Pune offering premium hair, skin, grooming, waxing, nail, and body care services with WhatsApp booking and directions.
 
 ## Booking
 
@@ -15,8 +15,7 @@ Clients can request an appointment from the website by choosing a service, date,
 - Global colour
 - Highlights and balayage
 - Hair spa and treatment
-- Male styling
-- Female classic wash
+- Skin cleanup and facial
 
 ## Contact
 
