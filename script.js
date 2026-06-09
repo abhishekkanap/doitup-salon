@@ -211,3 +211,46 @@ form.addEventListener("submit", (event) => {
   statusText.textContent = `Thank you, ${name}. Connect the booking endpoint to add this directly to the salon calendar and email.`;
   updateWhatsappConfirm();
 });
+
+const provideWebMcpContext = () => {
+  if (!navigator.modelContext || typeof navigator.modelContext.provideContext !== "function") {
+    return;
+  }
+
+  navigator.modelContext.provideContext({
+    tools: [
+      {
+        name: "get_salon_contact_details",
+        description: "Return public contact details for DO IT UP Unisex Salon.",
+        inputSchema: {
+          type: "object",
+          properties: {}
+        },
+        execute: async () => ({
+          name: "DO IT UP Unisex Salon",
+          phone: `+${salon.phone}`,
+          whatsapp: `https://wa.me/${salon.phone}`,
+          instagram: "https://www.instagram.com/doitup_salon/",
+          address: salon.location
+        })
+      },
+      {
+        name: "open_booking_form",
+        description: "Scroll to the appointment request form.",
+        inputSchema: {
+          type: "object",
+          properties: {}
+        },
+        execute: async () => {
+          document.querySelector("#booking").scrollIntoView({ behavior: "smooth", block: "start" });
+          return {
+            ok: true,
+            message: "Booking form opened."
+          };
+        }
+      }
+    ]
+  });
+};
+
+provideWebMcpContext();
