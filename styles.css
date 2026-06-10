@@ -946,7 +946,8 @@ textarea:focus {
   margin: 0;
   color: var(--soft-gold);
   font-weight: 900;
-  white-space: nowrap;
+  text-align: right;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 960px) {
