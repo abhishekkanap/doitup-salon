@@ -12,6 +12,8 @@ const galleryPrev = document.querySelector("[data-gallery-prev]");
 const galleryNext = document.querySelector("[data-gallery-next]");
 const whatsappConfirm = document.querySelector("[data-whatsapp-confirm]");
 const submitButton = form.querySelector('button[type="submit"]');
+const menuTabs = document.querySelectorAll("[data-menu-tab]");
+const menuPanels = document.querySelectorAll("[data-menu-panel]");
 
 const salon = {
   phone: "919158741818",
@@ -30,6 +32,37 @@ const syncHeader = () => {
 syncHeader();
 yearText.textContent = String(new Date().getFullYear());
 window.addEventListener("scroll", syncHeader, { passive: true });
+
+document.querySelectorAll(".section-heading, .service-card, .menu-board, .about-image, .about-copy, .insta-card, .booking-copy, .booking-form, .contact-details, .map-wrap").forEach((element) => {
+  element.classList.add("reveal");
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.14, rootMargin: "0px 0px -60px 0px" });
+
+document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+menuTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.menuTab;
+
+    menuTabs.forEach((item) => {
+      const isActive = item === tab;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-selected", String(isActive));
+    });
+
+    menuPanels.forEach((panel) => {
+      panel.classList.toggle("is-active", panel.dataset.menuPanel === target);
+    });
+  });
+});
 
 ratesOpen.addEventListener("click", () => {
   ratesDialog.showModal();

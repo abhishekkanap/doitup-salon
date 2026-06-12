@@ -8,9 +8,9 @@
       name="description"
       content="DO IT UP is a luxurious unisex salon in Kothrud, Pune offering premium hair, skin, grooming, waxing, nail, and body care services with WhatsApp booking and directions."
     />
-    <meta name="theme-color" content="#14120f" />
+    <meta name="theme-color" content="#080706" />
     <meta property="og:title" content="DO IT UP Unisex Salon" />
-    <meta property="og:description" content="Premium haircuts, styling, colour, and hair spa services in Kothrud, Pune." />
+    <meta property="og:description" content="Premium hair, skin, grooming, waxing, nail, and body care services in Kothrud, Pune." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/hero-salon.jpg" />
     <link rel="alternate" type="text/markdown" href="index.md" />
@@ -56,11 +56,13 @@
       </button>
 
       <nav class="site-nav" data-nav>
+        <a href="#about">The Shop</a>
+        <a href="#gallery">The Work</a>
         <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
         <a href="#booking">Booking</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Locations</a>
+        <a class="nav-pill" href="#contact">Find Us</a>
+        <a class="nav-cta" href="#booking">Book Now</a>
       </nav>
     </header>
 
@@ -68,19 +70,27 @@
       <section class="hero" id="home" aria-label="DO IT UP luxury salon">
         <div class="hero-media" role="img" aria-label="Premium salon styling suite"></div>
         <div class="hero-overlay"></div>
+        <div class="hero-status" aria-hidden="true">
+          <span></span>
+          Accepting Appointments
+        </div>
         <div class="hero-content">
-          <p class="eyebrow">Luxury haircuts, styling, and colour</p>
-          <h1>DO IT UP</h1>
+          <p class="eyebrow">Est. Kothrud · Pune</p>
+          <h1>
+            <span>Where</span>
+            <em>DO IT UP</em>
+            <span>Gets Fresh</span>
+          </h1>
           <p class="hero-copy">
-            A refined unisex salon in Kothrud for precision cuts, luminous color, modern skin rituals, relaxed grooming,
-            waxing, nail care, and polished body care.
+            A unisex salon with culture in the chair. Clean cuts, luminous color, skin rituals, grooming, waxing,
+            nails, and polished body care, done with detail every time.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#booking">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v14H3V7a2 2 0 0 1 2-2Z" />
               </svg>
-              Request Appointment
+              Appointment
             </a>
             <a
               class="button whatsapp"
@@ -92,7 +102,7 @@
                 <path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1.2 1.2-4A8 8 0 1 1 20 11.5Z" />
                 <path d="M8.8 8.8c.3-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.6 1.4c.1.3 0 .5-.2.7l-.4.4c.7 1.2 1.6 2.1 2.9 2.8l.5-.6c.2-.2.4-.3.7-.2l1.4.7c.3.1.4.3.4.6v.5c0 .4-.2.7-.6.9-.8.4-2.6.1-4.8-1.2-2.1-1.3-3.4-3.3-3.6-4.5-.1-.6.1-1 .2-1.4Z" />
               </svg>
-              WhatsApp Booking
+              WhatsApp
             </a>
             <a
               class="button ghost"
@@ -108,9 +118,24 @@
             </a>
           </div>
         </div>
-        <div class="hero-panel" aria-label="Salon highlights">
-          <strong>Tailored care for every guest</strong>
-          <p>Premium consultations, skilled salon care, and appointment support on WhatsApp.</p>
+          <p class="walk-in"><span></span> Walk ins welcome when slots are open</p>
+        </div>
+        <div class="hero-panel" aria-label="Current salon hours">
+          <span class="panel-label">Current Hours</span>
+          <dl>
+            <div>
+              <dt>Daily</dt>
+              <dd>10a to 9p</dd>
+            </div>
+            <div>
+              <dt>Booking</dt>
+              <dd>Reviewed by owner</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Kothrud</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -118,7 +143,8 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Services</p>
-            <h2>Designed for hair, colour, and confidence.</h2>
+            <h2>You deserve <em>the reset.</em></h2>
+            <p>Every service is dialed in from consultation to finish, with current DO IT UP rates kept one tap away.</p>
           </div>
           <button class="button rate-button" type="button" data-rates-open>
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -135,42 +161,42 @@
               alt="Hair styling service"
             />
             <div>
-              <span>01</span>
-              <h3>Signature Hair</h3>
-              <p>Female haircut, male haircut, classic wash, wash and blowdry, blowdry, iron, tong, and styling.</p>
-            </div>
-          </article>
-          <article class="service-card">
-            <img
-              src="assets/service-skin.jpg"
-              alt="Haircuts and styling service"
-            />
-            <div>
-              <span>02</span>
+              <span>In the chair</span>
               <h3>Haircuts & Styling</h3>
-              <p>Female haircut, male haircut, beard, male styling, female classic wash, wash and blowdry, blowdry, iron, and tong.</p>
+              <p>Female haircut, male haircut, beard, classic wash, wash and blowdry, blowdry, iron, tong, and styling.</p>
             </div>
           </article>
           <article class="service-card">
             <img
               src="assets/service-grooming.jpg"
-              alt="Premium grooming service"
+              alt="Hair colour and hair care service"
             />
             <div>
-              <span>03</span>
-              <h3>Colour Studio</h3>
-              <p>Male and female global colour, touch-up, highlights, balayage, and highlight streaks.</p>
+              <span>Color bar</span>
+              <h3>Colour & Hair Care</h3>
+              <p>Global colour, touch-up, highlights, balayage, protein treatment, and male or female hair spa.</p>
             </div>
           </article>
           <article class="service-card">
             <img
-              src="assets/service-hair.jpg"
-              alt="Hair treatment and spa service"
+              src="assets/service-skin.jpg"
+              alt="Facial and grooming service"
             />
             <div>
-              <span>04</span>
-              <h3>Colour & Care</h3>
-              <p>Global colour, touch-up, highlights, balayage, protein treatment, female hair spa.</p>
+              <span>Glow work</span>
+              <h3>Skin & Face Care</h3>
+              <p>Threading, face waxing, bleach, D-Tan, cleanups, facials, and hydra facial rituals.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img
+              src="assets/service-massage.jpg"
+              alt="Waxing manicure pedicure and body care service"
+            />
+            <div>
+              <span>Finishing room</span>
+              <h3>Waxing, Nails & Body</h3>
+              <p>Body waxing, manicure, pedicure, nail paint, nail buffing, nail cut, and body polishing.</p>
             </div>
           </article>
         </div>
@@ -184,6 +210,47 @@
           <span>Balayage</span>
           <span>Protein treatment</span>
           <span>Hair spa</span>
+          <span>Threading</span>
+          <span>Waxing</span>
+          <span>D-Tan</span>
+          <span>Facial</span>
+          <span>Manicure</span>
+          <span>Pedicure</span>
+          <span>Body polishing</span>
+        </div>
+        <div class="menu-board" aria-label="Featured service menu">
+          <div class="menu-tabs" role="tablist" aria-label="Service categories">
+            <button class="menu-tab is-active" type="button" role="tab" aria-selected="true" data-menu-tab="hair">Cuts & Styling</button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu-tab="colour">Colour & Care</button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu-tab="skin">Skin & Face</button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu-tab="body">Body & Nails</button>
+          </div>
+          <div class="menu-panels">
+            <div class="menu-panel is-active" data-menu-panel="hair">
+              <article><div><h4>Female Haircut <span>45 min</span></h4><p>Consulted cut and finish shaped to your texture.</p></div><strong>₹900</strong></article>
+              <article><div><h4>Male Haircut <span>30 min</span></h4><p>Clean clipper or scissor work with a polished finish.</p></div><strong>₹500</strong></article>
+              <article><div><h4>Beard / Grooming <span>20 min</span></h4><p>Shape, detailing, and clean edges between cuts.</p></div><strong>₹300</strong></article>
+              <article><div><h4>Wash & Blowdry <span>45 min</span></h4><p>Fresh wash with smooth, camera-ready styling.</p></div><strong>₹800</strong></article>
+            </div>
+            <div class="menu-panel" data-menu-panel="colour">
+              <article><div><h4>Female Global Colour <span>Consult</span></h4><p>Full-head colour with tone planning and finish.</p></div><strong>₹4000*</strong></article>
+              <article><div><h4>Touch-up <span>Root refresh</span></h4><p>Grey coverage or regrowth refresh, ammonia-free option available.</p></div><strong>₹1500</strong></article>
+              <article><div><h4>Classic Highlights <span>Dimension</span></h4><p>Placed brightness and movement for a softer grow-out.</p></div><strong>₹4000*</strong></article>
+              <article><div><h4>Balayage <span>Custom</span></h4><p>Hand-painted color with natural depth and glow.</p></div><strong>₹6000*</strong></article>
+            </div>
+            <div class="menu-panel" data-menu-panel="skin">
+              <article><div><h4>Threading <span>Detail</span></h4><p>Brows, lips, chin, forehead, side locks, and full face.</p></div><strong>₹100+</strong></article>
+              <article><div><h4>D-Tan <span>Face/body</span></h4><p>Raga and O3 options for face, hands, legs, front, and back.</p></div><strong>₹550+</strong></article>
+              <article><div><h4>Facial / Cleanup <span>Glow ritual</span></h4><p>Fruit, Raaga, Lotus, VLCC, Ozone, Kanpeki, and O3 options.</p></div><strong>₹1250+</strong></article>
+              <article><div><h4>Hydra Facial <span>Advanced</span></h4><p>Deeper skin refresh with selected premium facial ranges.</p></div><strong>₹4200+</strong></article>
+            </div>
+            <div class="menu-panel" data-menu-panel="body">
+              <article><div><h4>Body Waxing <span>Chocolate/Rica</span></h4><p>Hands, legs, front, back, underarms, full body, and bikini wax.</p></div><strong>₹200+</strong></article>
+              <article><div><h4>Manicure / Pedicure <span>Care</span></h4><p>Basic, Vedic Valley, Raaga, O3, and Bombini Icecream rituals.</p></div><strong>₹850+</strong></article>
+              <article><div><h4>Nail Care <span>Finish</span></h4><p>Nail paint, buffing, and nail cut for hands or feet.</p></div><strong>₹250+</strong></article>
+              <article><div><h4>Body Polishing <span>Full body</span></h4><p>Hands, legs, back, and full-body polish options.</p></div><strong>₹1500+</strong></article>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -191,10 +258,10 @@
         <div class="about-image" role="img" aria-label="Luxury salon interior"></div>
         <div class="about-copy">
           <p class="eyebrow">About</p>
-          <h2>Premium care without the cold formality.</h2>
+          <h2>Real care. <em>Real finish.</em></h2>
           <p>
             DO IT UP blends attentive consultation with elevated technique. Every appointment begins with lifestyle,
-            hair texture, skin needs, and maintenance in mind, then finishes with styling guidance you can actually use.
+            hair texture, skin needs, and maintenance in mind, then finishes with styling guidance you can use.
           </p>
           <div class="stats">
             <div>
@@ -202,8 +269,12 @@
               <span>Open daily</span>
             </div>
             <div>
-              <strong>60 min</strong>
-              <span>Average ritual</span>
+              <strong>14+</strong>
+              <span>Service categories</span>
+            </div>
+            <div>
+              <strong>Kothrud</strong>
+              <span>Pune salon</span>
             </div>
           </div>
         </div>
@@ -213,7 +284,7 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Gallery</p>
-            <h2>Salon moments, styled like posts.</h2>
+            <h2>The work <em>speaks.</em></h2>
           </div>
           <div class="gallery-controls" aria-label="Gallery controls">
             <button class="icon-button" type="button" aria-label="Previous gallery image" data-gallery-prev>
@@ -385,7 +456,7 @@
       <section class="booking section" id="booking">
         <div class="booking-copy">
           <p class="eyebrow">Booking</p>
-          <h2>Reserve your chair.</h2>
+          <h2>Reserve <em>your chair.</em></h2>
           <p>Choose your preferred service, date, and time. The salon owner will review the request before confirming.</p>
           <div class="booking-note">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -421,12 +492,18 @@
               <option value="">Choose a service</option>
               <option>Female haircut</option>
               <option>Male haircut</option>
-              <option>Beard</option>
+              <option>Beard / Grooming</option>
               <option>Wash and blowdry</option>
               <option>Global colour</option>
               <option>Highlights / Balayage</option>
               <option>Hair spa / Treatment</option>
-              <option>Male styling</option>
+              <option>Skin cleanup / Facial</option>
+              <option>Threading / Face waxing</option>
+              <option>Body waxing</option>
+              <option>Bleach / D-Tan</option>
+              <option>Manicure / Pedicure</option>
+              <option>Nail care</option>
+              <option>Body polishing</option>
             </select>
           </label>
           <label>
@@ -461,7 +538,7 @@
       <section class="contact section" id="contact">
         <div class="contact-details">
           <p class="eyebrow">Contact</p>
-          <h2>Visit the salon.</h2>
+          <h2>Find <em>the shop.</em></h2>
           <ul>
             <li>
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -566,7 +643,7 @@
             </svg>
           </button>
         </div>
-        <p class="rates-note">All rates are in Indian rupees. Rates marked * may vary by hair length, volume, or consultation.</p>
+        <p class="rates-note">All rates are in Indian rupees. Rates marked * may vary by hair length, volume, or consultation. Paired rates show half / full or front / back where applicable.</p>
         <div class="rate-groups">
           <section class="rate-group">
             <h3>Haircuts & Styling</h3>
@@ -605,6 +682,106 @@
               <div><dt>Male hair spa advanced</dt><dd>₹1500</dd></div>
               <div><dt>Female hair spa basic</dt><dd>₹2000*</dd></div>
               <div><dt>Female hair spa shea</dt><dd>₹2700*</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>Threading & Face Waxing</h3>
+            <p class="mini-note">Prices shown as threading / face wax.</p>
+            <dl>
+              <div><dt>Eyebrows</dt><dd>₹100 / ₹200</dd></div>
+              <div><dt>Upper lips</dt><dd>₹100 / ₹120</dd></div>
+              <div><dt>Lower lip</dt><dd>₹100 / ₹120</dd></div>
+              <div><dt>Forehead</dt><dd>₹100 / ₹120</dd></div>
+              <div><dt>Chin</dt><dd>₹100 / ₹200</dd></div>
+              <div><dt>Side locks</dt><dd>₹200 / ₹200</dd></div>
+              <div><dt>Full face</dt><dd>₹450 / ₹950</dd></div>
+              <div><dt>Nose wax</dt><dd>₹200</dd></div>
+              <div><dt>Underarms wax</dt><dd>₹350</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>Body Waxing</h3>
+            <p class="mini-note">Prices shown as chocolate / Rica.</p>
+            <dl>
+              <div><dt>Hand full</dt><dd>₹300 / ₹650</dd></div>
+              <div><dt>Leg half / full</dt><dd>₹400 / ₹600 | ₹650 / ₹1200</dd></div>
+              <div><dt>Front half / full</dt><dd>₹500 / ₹800 | ₹800 / ₹1250</dd></div>
+              <div><dt>Back half / full</dt><dd>₹500 / ₹750 | ₹750 / ₹1250</dd></div>
+              <div><dt>Underarms</dt><dd>₹200 / ₹300</dd></div>
+              <div><dt>Full body</dt><dd>₹2500 / ₹3500</dd></div>
+              <div><dt>Bikini wax</dt><dd>₹2500</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>Bleach</h3>
+            <p class="mini-note">Oxylife bleach rates.</p>
+            <dl>
+              <div><dt>Upper lips</dt><dd>₹150</dd></div>
+              <div><dt>Underarms</dt><dd>₹400</dd></div>
+              <div><dt>Neck front / back</dt><dd>₹550 / ₹550</dd></div>
+              <div><dt>Full face</dt><dd>₹550</dd></div>
+              <div><dt>Hand full</dt><dd>₹850</dd></div>
+              <div><dt>Leg half / full</dt><dd>₹850 / ₹1250</dd></div>
+              <div><dt>Front half / full</dt><dd>₹600 / ₹950</dd></div>
+              <div><dt>Back half / full</dt><dd>₹550 / ₹850</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>D-Tan</h3>
+            <p class="mini-note">Prices shown as Raga / O3.</p>
+            <dl>
+              <div><dt>Neck front / back</dt><dd>₹550 / ₹750</dd></div>
+              <div><dt>Full face</dt><dd>₹550 / ₹750</dd></div>
+              <div><dt>Underarms</dt><dd>₹600 / ₹250</dd></div>
+              <div><dt>Hand full</dt><dd>₹850 / ₹1200</dd></div>
+              <div><dt>Leg half / full</dt><dd>₹850 / ₹1250 | ₹1200 / ₹1500</dd></div>
+              <div><dt>Front half / full</dt><dd>₹600 / ₹950 | ₹850 / ₹1250</dd></div>
+              <div><dt>Back half / full</dt><dd>₹550 / ₹850 | ₹750 / ₹1200</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>Manicure & Pedicure</h3>
+            <p class="mini-note">Prices shown as manicure / pedicure.</p>
+            <dl>
+              <div><dt>Basic</dt><dd>₹850 / ₹950</dd></div>
+              <div><dt>Vedic Valley</dt><dd>₹1200 / ₹1250</dd></div>
+              <div><dt>Raaga</dt><dd>₹1350 / ₹1500</dd></div>
+              <div><dt>O3</dt><dd>₹1550 / ₹1750</dd></div>
+              <div><dt>Bombini Icecream</dt><dd>₹1800 / ₹1950</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>Nail Care</h3>
+            <p class="mini-note">Prices shown as hand / leg.</p>
+            <dl>
+              <div><dt>Nail paint</dt><dd>₹250 / ₹250</dd></div>
+              <div><dt>Nail buffing</dt><dd>₹300 / ₹300</dd></div>
+              <div><dt>Nail cut</dt><dd>₹300 / ₹300</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>Facial & Cleanup</h3>
+            <p class="mini-note">Prices shown as facial / hydra facial / cleanup.</p>
+            <dl>
+              <div><dt>Fruit</dt><dd>- / - / ₹1250</dd></div>
+              <div><dt>Raaga</dt><dd>₹1950 / - / ₹1500</dd></div>
+              <div><dt>Lotus</dt><dd>₹2400 / ₹4200 / ₹1800</dd></div>
+              <div><dt>VLCC</dt><dd>₹2800 / ₹4500 / -</dd></div>
+              <div><dt>Ozone</dt><dd>₹3000 / ₹4900 / -</dd></div>
+              <div><dt>Kanpeki</dt><dd>₹3600 / ₹5400 / -</dd></div>
+              <div><dt>O3</dt><dd>₹4200 / ₹6000 / ₹1950</dd></div>
+              <div><dt>O3 Melabeza</dt><dd>- / - / ₹2300</dd></div>
+              <div><dt>O3 Seaboxy Dry Skin</dt><dd>₹4000 / ₹6100 / -</dd></div>
+              <div><dt>O3 Hydroxy Oil Skin</dt><dd>₹4000 / ₹6100 / -</dd></div>
+            </dl>
+          </section>
+          <section class="rate-group">
+            <h3>Body Polishing</h3>
+            <dl>
+              <div><dt>Hand full</dt><dd>₹1800</dd></div>
+              <div><dt>Leg half / full</dt><dd>₹1800 / ₹2500</dd></div>
+              <div><dt>Back half / full</dt><dd>₹1500 / ₹1950</dd></div>
+              <div><dt>Full body</dt><dd>₹8500</dd></div>
             </dl>
           </section>
         </div>
