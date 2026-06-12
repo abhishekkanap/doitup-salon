@@ -150,6 +150,7 @@ section {
 
 .logo-dots circle {
   opacity: 0;
+  fill: currentColor;
   animation: logoFade 1s ease-out 1.5s forwards;
 }
 
