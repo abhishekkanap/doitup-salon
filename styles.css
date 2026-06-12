@@ -1096,7 +1096,7 @@ textarea:focus {
 }
 
 .site-footer p {
-  max-width: 360px;
+  max-width: 380px;
   color: var(--muted);
 }
 
@@ -1387,11 +1387,11 @@ textarea:focus {
 
   .site-footer {
     display: grid;
-    text-align: left;
+    text-align: center;
   }
 
   .footer-meta {
-    text-align: left;
+    text-align: center;
   }
 
   .quick-actions {
