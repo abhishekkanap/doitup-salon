@@ -460,7 +460,16 @@ h4 {
   height: 9px;
   border-radius: 50%;
   background: var(--green);
-  box-shadow: 0 0 0 6px rgba(77, 213, 107, 0.12);
+  box-shadow: 0 0 0 4px rgba(92, 155, 105, 0.2);
+  animation: dotFlash 3s ease-in-out infinite;
+}
+@keyframes dotFlash {
+  0%, 100% {
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    opacity: 0.2; /* Fades out smoothly */
+  }
 }
 
 .hero-status {
@@ -489,7 +498,21 @@ h4 {
   height: 4px;
   border-radius: 999px;
   background: var(--copper);
-  box-shadow: 0 0 20px rgba(196, 95, 44, 0.7);
+  box-shadow: 0 0 20px rgba(232, 60, 34, 0.7);
+  animation: lineBreathe 2s ease-in-out infinite; /* Adds the live pulse */
+}
+
+@keyframes lineBreathe {
+  0%, 100% {
+    transform: scaleX(1); /* Full width (30px) */
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(232, 60, 34, 0.7);
+  }
+  50% {
+    transform: scaleX(0.3); /* Shrinks down to a tiny dot */
+    opacity: 0.5;
+    box-shadow: 0 0 8px rgba(196, 95, 44, 0.2);
+  }
 }
 
 .hero-panel {
