@@ -124,7 +124,7 @@ section {
   border-radius: 50%;
   background: transparent;
   color: var(--gold);
-  box-shadow: null;/*inset 0 0 0 1px rgba(214, 173, 99, 0.2); */
+  box-shadow: none;/*inset 0 0 0 1px rgba(214, 173, 99, 0.2); */
 }
 
 .brand-logo svg {
