@@ -285,5 +285,64 @@ const provideWebMcpContext = () => {
     ]
   });
 };
+// --- INSTAGRAM API FETCH ---
+const fetchInstagramPosts = () => {
+  // 1. Replace this with your actual Meta Developer Access Token
+  const accessToken = 'YOUR_LONG_ACCESS_TOKEN_HERE'; 
+  const limit = 6; // Number of posts to fetch to fill your gallery track
 
+  const instagramUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,timestamp&limit=${limit}&access_token=${accessToken}`;
+
+  // If we don't have a token, don't try to fetch (keeps the hardcoded HTML as a fallback)
+  if (accessToken === 'YOUR_LONG_ACCESS_TOKEN_HERE') {
+    console.log("Instagram token not set. Showing default gallery.");
+    return;
+  }
+
+  fetch(instagramUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Clear the hardcoded static cards currently in your HTML
+      galleryTrack.innerHTML = ''; 
+      
+      data.data.forEach(post => {
+        // We only want to display photos or carousels (albums), not reels/videos
+        if(post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM') {
+          
+          // Clean up the caption: limit length and provide a fallback if there is no caption
+          const shortCaption = post.caption ? post.caption.substring(0, 85) + '...' : 'Premium salon moments at DO IT UP.';
+
+          // Build the HTML card matching your custom CSS perfectly
+          const cardHTML = `
+            <article class="insta-card reveal">
+              <div class="post-head">
+                <span class="brand-logo mini-logo" aria-hidden="true">
+                  <svg viewBox="5 5 190 190"><g class="logo-monogram"><g class="logo-lines"><path d="M 72 135 A 45 45 0 1 1 125 137" /><path d="M 93 42 L 93 158 A 62 62 0 0 0 151 82" /></g><g class="logo-dots"><circle cx="151" cy="82" r="4.5" /><circle cx="141" cy="66" r="4.5" /></g></g></svg>
+                </span>
+                <div>
+                  <strong>doitup_salon</strong>
+                  <span>Instagram</span>
+                </div>
+              </div>
+              <a href="${post.permalink}" target="_blank" rel="noreferrer">
+                <img class="post-image" src="${post.media_url}" alt="Instagram Post" />
+              </a>
+              <p>${shortCaption}</p>
+            </article>
+          `;
+          
+          // Inject the newly built card into the gallery track
+          galleryTrack.innerHTML += cardHTML;
+        }
+      });
+
+      // Re-trigger your scroll animations for the newly injected cards
+      document.querySelectorAll(".insta-card.reveal").forEach((element) => revealObserver.observe(element));
+    })
+    .catch(error => console.error('Error fetching Instagram posts:', error));
+};
+
+// Run the fetch when the script loads
+fetchInstagramPosts();
+// ---------------------------
 provideWebMcpContext();
