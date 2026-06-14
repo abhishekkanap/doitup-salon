@@ -145,18 +145,19 @@ section {
 .logo-lines path {
   stroke-dasharray: 350;
   stroke-dashoffset: 350;
-  animation: logoDraw 2s ease-out forwards;
+  animation: logoDraw 3s ease-out forwards;
 }
 
 .logo-dots circle {
   opacity: 0;
   fill: currentColor;
-  animation: logoFade 1s ease-out 1.5s forwards;
+  animation: logoFade 1s ease-out 1s forwards;
 }
 
 .logo-monogram {
   transform-origin: 100px 100px;
-  animation: logoBreathe 5s ease-in-out infinite alternate;
+  animation: logoBreathe 0.9s ease-in-out infinite alternate;
+  filter: drop-shadow(0px 0px 4px rgba(198, 178, 135, 1));
 }
 
 @keyframes logoDraw {
