@@ -1135,6 +1135,14 @@ textarea:focus {
   color: var(--gold);
 }
 
+.services-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;  /* Gives nice spacing between the menu and the button */
+  width: 100%;
+}
+
 .quick-actions {
   position: fixed;
   right: 18px;
