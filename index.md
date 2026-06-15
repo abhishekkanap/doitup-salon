@@ -1,4 +1,4 @@
-# DO IT UP Unisex Salon
+# DO IT UP | Unisex Salon
 
 DO IT UP is a unisex salon in Kothrud, Pune offering hair, skin, grooming, waxing, nail, and body care services.
 
@@ -28,5 +28,5 @@ Clients can request an appointment from the website by choosing a service, date,
 - Phone: +91 9158741818
 - WhatsApp: +91 9158741818
 - Email: contact@doitupsalon.com
-- Instagram: @doitup_salon
+- Instagram: @doitup_salon_
 - Address: Kshitij Residency, Shop No. B-13, Mayur Colony Rd, Kothrud, Pune, Maharashtra 411038
