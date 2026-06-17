@@ -345,4 +345,145 @@ const fetchInstagramPosts = () => {
 // Run the fetch when the script loads
 fetchInstagramPosts();
 // ---------------------------
+// Lightbox functionality for gallery
+const initLightbox = () => {
+  const lightbox = document.querySelector('.lightbox');
+  const lightboxImage = document.querySelector('.lightbox-image');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const lightboxPrev = document.querySelector('.lightbox-prev');
+  const lightboxNext = document.querySelector('.lightbox-next');
+  const galleryLinks = document.querySelectorAll('.gallery-link');
+
+  let currentImageIndex = 0;
+  let images = [];
+
+  // Initialize images array from gallery links
+  const initImages = () => {
+    images = Array.from(document.querySelectorAll('.gallery-link img')).map(img => ({
+      src: img.src,
+      alt: img.alt
+    }));
+  };
+
+  // Open lightbox
+  const openLightbox = (index) => {
+    if (images.length === 0) return;
+
+    currentImageIndex = index;
+    lightboxImage.src = images[currentImageIndex].src;
+    lightboxImage.alt = images[currentImageIndex].alt;
+    lightbox.setAttribute('aria-hidden', 'false');
+
+    // Trap focus
+    const cleanupFocusTrap = trapFocus();
+    // Store cleanup function for later use
+    openLightbox.cleanupFocusTrap = cleanupFocusTrap;
+  };
+
+  // Close lightbox
+  const closeLightbox = () => {
+    lightbox.setAttribute('aria-hidden', 'true');
+    // Remove focus trap
+    if (openLightbox.cleanupFocusTrap) {
+      openLightbox.cleanupFocusTrap();
+    }
+    // Return focus to the last opened gallery link (optional enhancement)
+  };
+
+  // Show next image
+  const showNextImage = () => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    lightboxImage.src = images[currentImageIndex].src;
+    lightboxImage.alt = images[currentImageIndex].alt;
+  };
+
+  // Show previous image
+  const showPrevImage = () => {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    lightboxImage.src = images[currentImageIndex].src;
+    lightboxImage.alt = images[currentImageIndex].alt;
+  };
+
+  // Keyboard navigation
+  const handleKeyDown = (e) => {
+    if (lightbox.getAttribute('aria-hidden') === 'false') {
+      switch(e.key) {
+        case 'Escape':
+          closeLightbox();
+          break;
+        case 'ArrowRight':
+          showNextImage();
+          break;
+        case 'ArrowLeft':
+          showPrevImage();
+          break;
+      }
+    }
+  };
+
+  // Click outside image to close
+  const handleOverlayClick = (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  };
+
+  // Focus trapping for accessibility
+  const trapFocus = () => {
+    const lightboxContent = document.querySelector('.lightbox-content');
+    const focusableElements = lightboxContent.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    const trapTabKey = (e) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) { // shift + tab
+          if (document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+          }
+        } else { // tab
+          if (document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+          }
+        }
+      }
+    };
+
+    lightbox.addEventListener('keydown', trapTabKey);
+    // Return cleanup function
+    return () => {
+      lightbox.removeEventListener('keydown', trapTabKey);
+    };
+  };
+
+  // Initialize
+  initImages();
+
+  // Event listeners
+  galleryLinks.forEach((link, index) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLightbox(index);
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxNext.addEventListener('click', showNextImage);
+  lightboxPrev.addEventListener('click', showPrevImage);
+  lightbox.addEventListener('click', handleOverlayClick);
+  document.addEventListener('keydown', handleKeyDown);
+
+  // Re-initialize images if DOM changes (for dynamically loaded content)
+  // Could use MutationObserver if needed for future enhancements
+};
+
+// Initialize lightbox when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initLightbox);
+} else {
+  initLightbox();
+}
+
 provideWebMcpContext();
