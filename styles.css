@@ -14,6 +14,9 @@
   --green: #4dd56b;
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
   --radius: 7px;
+  --gradient-primary: linear-gradient(135deg, rgba(196, 95, 44, 0.15) 0%, rgba(214, 173, 99, 0.1) 50%, rgba(196, 95, 44, 0.05) 100%);
+  --gradient-secondary: linear-gradient(90deg, transparent 0%, rgba(214, 173, 99, 0.08) 50%, transparent 100%);
+  --sparkle-color: rgba(255, 255, 255, 0.3);
 }
 
 * {
@@ -55,6 +58,7 @@ iframe {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 button,
@@ -214,6 +218,7 @@ section {
 .site-nav a {
   white-space: nowrap;
   transition: color 200ms ease, border-color 200ms ease, background 200ms ease;
+  cursor: pointer;
 }
 
 .site-nav a:hover,
@@ -353,12 +358,38 @@ h4 {
   letter-spacing: 0.22em;
   box-shadow: 0 18px 42px rgba(196, 95, 44, 0.34);
   transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .button:hover,
 .button.hover {
   background: var(--copper-2);
   transform: translateY(-2px);
+}
+
+.button:hover::before,
+.button.hover::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 30% 30%, var(--sparkle-color) 0%, transparent 25%),
+    radial-gradient(circle at 70% 60%, var(--sparkle-color) 0%, transparent 20%),
+    radial-gradient(circle at 20% 80%, var(--sparkle-color) 0%, transparent 15%),
+    radial-gradient(circle at 80% 40%, var(--sparkle-color) 0%, transparent 25%);
+  background-size: 600% 600%;
+  animation: sparkleShift 4s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button:hover::before,
+.button.hover::before {
+  opacity: 1;
 }
 
 .button.ghost,
@@ -436,7 +467,10 @@ h4 {
   background:
     radial-gradient(circle at 86% 16%, rgba(196, 95, 44, 0.18), transparent 26%),
     linear-gradient(90deg, rgba(8, 7, 6, 0.92) 0%, rgba(8, 7, 6, 0.7) 38%, rgba(8, 7, 6, 0.26) 70%),
-    linear-gradient(180deg, rgba(8, 7, 6, 0.25), var(--ink) 100%);
+    linear-gradient(180deg, rgba(8, 7, 6, 0.25), var(--ink) 100%),
+    var(--gradient-primary);
+  background-blend-mode: overlay;
+  animation: gradientShift 12s ease-in-out infinite;
 }
 
 .hero-content {
@@ -630,8 +664,8 @@ h4 {
 
 .service-card:hover,
 .service-card.hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px) rotateX(5deg) rotateY(2deg);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
   border-color: var(--line-strong);
   background: var(--panel-2);
 }
@@ -664,8 +698,8 @@ h4 {
 
 .service-card:hover img,
 .service-card.hover img {
-  filter: grayscale(0.35) contrast(1.08) brightness(0.88);
-  transform: scale(1.1);
+  filter: grayscale(0.2) contrast(1.12) brightness(0.92);
+  transform: scale(1.12) rotate(2deg);
 }
 
 .service-card div {
@@ -1364,6 +1398,24 @@ textarea:focus {
   }
 }
 
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes sparkleShift {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1687,3 +1739,4 @@ textarea:focus {
     touch-action: pan-y; /* Allow vertical scrolling if needed */
   }
 }
+
