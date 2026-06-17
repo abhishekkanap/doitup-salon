@@ -216,7 +216,8 @@ section {
   transition: color 200ms ease, border-color 200ms ease, background 200ms ease;
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav a.hover {
   color: var(--paper);
 }
 
@@ -235,7 +236,8 @@ section {
   border: 1px solid rgba(246, 239, 230, 0.22);
 }
 
-.site-nav .nav-pill:hover {
+.site-nav .nav-pill:hover,
+.site-nav .nav-pill.hover {
   border-color: rgba(246, 239, 230, 0.48);
 }
 
@@ -245,7 +247,8 @@ section {
   box-shadow: 0 12px 30px rgba(196, 95, 44, 0.34);
 }
 
-.site-nav .nav-cta:hover {
+.site-nav .nav-cta:hover,
+.site-nav .nav-cta.hover {
   background: var(--copper-2);
 }
 
@@ -352,7 +355,8 @@ h4 {
   transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
 }
 
-.button:hover {
+.button:hover,
+.button.hover {
   background: var(--copper-2);
   transform: translateY(-2px);
 }
@@ -370,11 +374,17 @@ h4 {
 }
 
 .button.ghost:hover,
+.button.ghost.hover,
 .button.whatsapp:hover,
+.button.whatsapp.hover,
 .button.instagram:hover,
+.button.instagram.hover,
 .button.map-button:hover,
+.button.map-button.hover,
 .button.rate-button:hover,
-.whatsapp-notice:hover {
+.button.rate-button.hover,
+.whatsapp-notice:hover,
+.whatsapp-notice.hover {
   border-color: rgba(246, 239, 230, 0.48);
   background: rgba(246, 239, 230, 0.08);
   transform: translateY(-2px);
@@ -389,7 +399,8 @@ h4 {
   background: rgba(246, 239, 230, 0.05);
 }
 
-.icon-button:hover {
+.icon-button:hover,
+.icon-button.hover {
   border-color: var(--line-strong);
   color: var(--gold);
   transform: scale(1.08);
@@ -617,14 +628,16 @@ h4 {
   z-index: 1;
 }
 
-.service-card:hover {
+.service-card:hover,
+.service-card.hover {
   transform: translateY(-6px);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
   border-color: var(--line-strong);
   background: var(--panel-2);
 }
 
-.service-card:hover img {
+.service-card:hover img,
+.service-card.hover img {
   filter: grayscale(0.35) contrast(1.08) brightness(0.88);
   transform: scale(1.1);
 }
@@ -649,7 +662,8 @@ h4 {
   transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), filter 600ms ease;
 }
 
-.service-card:hover img {
+.service-card:hover img,
+.service-card.hover img {
   filter: grayscale(0.35) contrast(1.08) brightness(0.88);
   transform: scale(1.1);
 }
@@ -880,7 +894,8 @@ h4 {
   z-index: 1;
 }
 
-.insta-card:hover {
+.insta-card:hover,
+.insta-card.hover {
   transform: translateY(-8px) rotateX(2deg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   border-color: var(--line-strong);
@@ -922,7 +937,8 @@ h4 {
   backface-visibility: hidden;
 }
 
-.insta-card:hover .post-image {
+.insta-card:hover .post-image,
+.insta-card.hover .post-image {
   filter: grayscale(0.2) contrast(1.12) brightness(1.04);
   transform: scale(1.02);
 }
@@ -1002,8 +1018,11 @@ textarea {
 }
 
 input:hover,
+input.hover,
 select:hover,
-textarea:hover {
+select.hover,
+textarea:hover,
+textarea.hover {
   border-color: rgba(246, 239, 230, 0.28);
   background: rgba(8, 7, 6, 0.62);
 }
@@ -1192,7 +1211,8 @@ textarea:focus {
   display: inline-block;
 }
 
-.footer-meta a:hover {
+.footer-meta a:hover,
+.footer-meta a.hover {
   color: var(--copper-2);
   transform: translateY(-2px);
 }
@@ -1208,7 +1228,8 @@ textarea:focus {
   transition: width 300ms ease;
 }
 
-.footer-meta a:hover::after {
+.footer-meta a:hover::after,
+.footer-meta a.hover::after {
   width: 100%;
 }
 
@@ -1246,7 +1267,8 @@ textarea:focus {
   overflow: hidden;
 }
 
-.quick-actions a:hover {
+.quick-actions a:hover,
+.quick-actions a.hover {
   border-color: var(--line-strong);
   color: var(--gold);
   transform: translateY(-4px) scale(1.08);
@@ -1270,7 +1292,8 @@ textarea:focus {
   transition: left 0.6s;
 }
 
-.quick-actions a:hover::before {
+.quick-actions a:hover::before,
+.quick-actions a.hover::before {
   left: 100%;
 }
 
@@ -1530,7 +1553,13 @@ textarea:focus {
   }
 
   .quick-actions {
-    display: none;
+    display: grid;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    top: auto;
+    transform: none;
   }
 }
 
@@ -1591,7 +1620,8 @@ textarea:focus {
   z-index: 10;
 }
 
-.lightbox-nav:hover {
+.lightbox-nav:hover,
+.lightbox-nav.hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-50%) scale(1.1);
 }
@@ -1626,7 +1656,8 @@ textarea:focus {
   z-index: 10;
 }
 
-.lightbox-close:hover {
+.lightbox-close:hover,
+.lightbox-close.hover {
   background: rgba(255, 255, 255, 0.25);
   transform: scale(1.1);
 }
@@ -1641,7 +1672,8 @@ textarea:focus {
   transition: transform 160ms ease;
 }
 
-.gallery-link:hover {
+.gallery-link:hover,
+.gallery-link.hover {
   transform: scale(1.05);
 }
 

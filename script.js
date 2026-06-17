@@ -486,4 +486,38 @@ if (document.readyState === 'loading') {
   initLightbox();
 }
 
+// Add touch event support for hover effects on mobile
+const setupTouchHoverEffects = () => {
+  // Select all interactive elements that should show hover effects on touch
+  const hoverElements = document.querySelectorAll(
+    '.button, .icon-button, .site-nav a, .site-nav .nav-pill, .site-nav .nav-cta, ' +
+    '.service-card, .insta-card, .quick-actions a, .menu-tab, ' +
+    '.lightbox-nav, .lightbox-close, .gallery-link, .services-footer .button.rate-button'
+  );
+
+  hoverElements.forEach(element => {
+    // Add touchstart listener to add hover class
+    element.addEventListener('touchstart', () => {
+      element.classList.add('hover');
+    }, { passive: true });
+
+    // Add touchend listener to remove hover class
+    element.addEventListener('touchend', () => {
+      element.classList.remove('hover');
+    }, { passive: true });
+
+    // Also handle touchcancel to ensure class is removed
+    element.addEventListener('touchcancel', () => {
+      element.classList.remove('hover');
+    }, { passive: true });
+  });
+};
+
+// Initialize touch hover effects when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupTouchHoverEffects);
+} else {
+  setupTouchHoverEffects();
+}
+
 provideWebMcpContext();
